@@ -1,22 +1,23 @@
 <?php
 
-$booleanTrue;
-$booleanFalse;
+$booleanTrue=true;
+$booleanFalse=false;
 
-$int;
+$int=2019991992;
+a
+$float=2.15;
 
-$float;
+$integer=1455000033;
 
-$integer;
+$double= [4,445555];
 
-$double;
+$string='Hello';
 
-$string;
+$array=['Hello','World'];
 
-$array;
+$doubleDimensionArray=['Hello','Morning'];
 
-$doubleDimenssionArray;
+$associativeArray=[ 'luxembourg' => [12233445455,23333333444],
+                'trier' => [2333444444,23343445555]];
 
-$associativeArray;
-
-$null;
+$null=null;
