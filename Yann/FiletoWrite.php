@@ -1,7 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: etudiant
- * Date: 28/02/2019
- * Time: 10:49
- */
+
+$FiletoWrite = "FiletoWrite.txt";
+
+$fp = fopen($FiletoWrite, 'w');
+fwrite($fp, '1111111111');
+fwrite($fp, '23');
+fclose($fp);
+
+?>
