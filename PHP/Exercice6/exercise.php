@@ -1,20 +1,31 @@
 <?php
- $filenameOriginal = "file.txt";
- $filenameToWrite = "fileTemp.txt";
 
- copy ($filenameOriginal, $filenameToWrite);
+function easterReverse($FilenameToEdit) {
 
- $fileContent = file_get_contents($filenameToWrite);
 
- echo "$fileContent";
+    $fileContent = file_get_contents($FilenameToEdit);
 
- echo "<br> Halfway :".floor(strlen($fileContent)/2);
+    //echo "$fileContent";
 
- $secondPart = substr($fileContent, floor(strlen($fileContent)/2));
- $firstPart = substr($fileContent,0,strlen($secondPart) -1);
+    //echo "<br> HalfWay: ".floor(strlen($fileContent) / 2);
 
- echo "<br>firstPart:<br>".$firstPart;
 
- echo "<br>secondPart:<br>".$secondPart;
+    $secondPart = substr($fileContent, floor(strlen($fileContent) / 2));
+    $firstPart = substr($fileContent, 0, strlen($secondPart) - 1);
 
- echo "<br>secondPartReversed:<br>".strrev($secondPart);
+    //echo "<br>firstPart:<br>".$firstPart;
+
+    //echo "<br>secondPart:<br>".$secondPart;
+
+    //echo "<br>secondPartReversed:<br>".strrev($secondPart);
+
+    $file = fopen($FilenameToEdit, 'r+');
+    fseek($file, strlen($firstPart), SEEK_SET);
+    fwrite($file, strrev($secondPart), strlen($secondPart));
+    fclose($file);
+
+}
+
+easterReverse("file.txt");
+
+
