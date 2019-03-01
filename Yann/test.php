@@ -39,6 +39,6 @@ function FindInArrayAndChange ($ArrayIn, $StringToFind,$NewValue){
 
 };
 
-$MyArray = ['John','Mary']; 
+$MyArray = ['John','Mary'];
 
 print_r(FindInArrayAndCHange ($MyArray, 'John','xxx'));
