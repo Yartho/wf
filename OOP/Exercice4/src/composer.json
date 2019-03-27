@@ -1,0 +1,23 @@
+{
+    "name": "yann/ex4",
+    "description": "Exercice4",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "yannhoffmann",
+            "email": "yann.hoffmann@icloud.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+      "symfony/security": "^4.2@stable"
+    },
+	
+	"autoload": {
+	"psr-4": {
+	"Model\\": "Model/",
+	"Exception\\":"Exception/"
+		}
+	}
+}
